@@ -5,13 +5,6 @@ export type Album={
 }
 
 
-export type AlbumDetail={
-    artistName: string;
-    trackName: string;
-    trackViewUrl: string;
-    longDescription: string;
-}
-
 export type AlbumResponse={
     albums: Album[];
 }
