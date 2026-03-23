@@ -15,8 +15,14 @@ const MusicContext = createContext<MusicContextType | null>(null);
 export const MusicProvider = ({ children }: { children: ReactNode }) => {
     const [favAlbumsList, setFavAlbumList] = useState<Album[]>([])
 
-    const favAlbumsListPush = (item: Album) => { console.log("context", item); setFavAlbumList([...favAlbumsList, item]); console.log(favAlbumsList) }
-    const favAlbumsListPop = (item: Album) => { setFavAlbumList(favAlbumsList.filter(e => e !== item)) }
+    const favAlbumsListPush = (item: Album) => {
+        if (!favAlbumsList.includes(item)) {
+            setFavAlbumList([...favAlbumsList, item])
+        } else {
+            console.log("ya está el album")
+        }
+    }
+    const favAlbumsListPop = (item: Album) => { setFavAlbumList(favAlbumsList.filter(e => e.collectionId !== item.collectionId)) }
 
     return (
         <MusicContext.Provider value={{ favAlbumsList, favAlbumsListPush, favAlbumsListPop }}>

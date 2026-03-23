@@ -12,13 +12,14 @@ const Favoritos = () => {
     console.log(favAlbumsList)
 
     return (
+
         <div>
-            {favAlbumsList.map(a => (
-                <div>
-                    <AlbumCard key={a.collectionId} album={a} />
+            {favAlbumsList.length ? favAlbumsList.map(a => (
+                <div key={a.collectionId}>
+                    <AlbumCard album={a} />
                     <button onClick={() => { return favAlbumsListPop(a) }}>Delete from favourites</button>
                 </div>
-            ))}
+            )) : <h1>No hay favs</h1>}
         </div>
     )
 }
