@@ -1,24 +1,25 @@
 "use client"
 
+import { Album } from "@/lib/types";
 import { createContext, ReactNode, useCallback, useContext, useState } from "react";
 
 
 type MusicContextType = {
-    favAlbumList: string[],
-    favAlbumsListPush: (item: string) => void,
-    favAlbumsListPop: (item: string) => void,
+    favAlbumsList: Album[],
+    favAlbumsListPush: (item: Album) => void,
+    favAlbumsListPop: (item: Album) => void,
 }
 
 const MusicContext = createContext<MusicContextType | null>(null);
 
 export const MusicProvider = ({ children }: { children: ReactNode }) => {
-    const [favAlbumList, setFavAlbumList] = useState<string[]>([])
+    const [favAlbumsList, setFavAlbumList] = useState<Album[]>([])
 
-    const favAlbumsListPush = (item: string) => { setFavAlbumList([...favAlbumList, item]) }
-    const favAlbumsListPop = (item: string) => { setFavAlbumList(favAlbumList.filter(e => e !== item)) }
+    const favAlbumsListPush = (item: Album) => { setFavAlbumList([...favAlbumsList, item]) }
+    const favAlbumsListPop = (item: Album) => { setFavAlbumList(favAlbumsList.filter(e => e !== item)) }
 
     return (
-        <MusicContext.Provider value={{ favAlbumList, favAlbumsListPush, favAlbumsListPop }}>
+        <MusicContext.Provider value={{ favAlbumsList, favAlbumsListPush, favAlbumsListPop }}>
             {children}
         </MusicContext.Provider>
     )
