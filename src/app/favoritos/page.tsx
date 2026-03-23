@@ -1,3 +1,4 @@
+"use client"
 import AlbumCard from "@/components/AlbumComponent";
 import { useMusic } from "@/context/MusicContext"
 
