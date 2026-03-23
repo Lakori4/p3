@@ -1,3 +1,4 @@
+import AlbumCard from "@/components/AlbumComponent";
 import { useMusic } from "@/context/MusicContext"
 
 
@@ -7,17 +8,16 @@ const Favoritos = () => {
 
     const { favAlbumsList, favAlbumsListPop } = useMusic();
 
-
-
     return (
         <div>
             {favAlbumsList.map(a => (
-                <div className="albumCard">
-                    <img src={a.trackViewUrl} alt={a.trackName} />
-                    <h3>{a.trackName}</h3>
-                    <h4>{a.artistName}</h4>
+                <div>
+                    <AlbumCard album={a} />
+                    <button onClick={() => { return favAlbumsListPop(a) }}>Delete from favourites</button>
                 </div>
             ))}
         </div>
     )
 }
+
+export default Favoritos
