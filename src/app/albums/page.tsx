@@ -17,12 +17,14 @@ export default function AlbumSearchPage() {
 
         async function fetchAlbums() {
             const query = busqueda.trim();
+            console.log(query)
             const data = await searchAlbum(query)
+            console.log(data)
             setAlbums(data)
         }
         fetchAlbums();
 
-    }, [search])
+    }, [search, busqueda])
     return (
         <div>
             <div className="searchContainer">

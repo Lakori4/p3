@@ -7,5 +7,5 @@ export type Album = {
 
 
 export type AlbumResponse = {
-    albums: Album[];
+    results: Album[];
 }
