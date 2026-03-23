@@ -6,6 +6,7 @@ import { searchAlbum } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Album } from "@/lib/types";
 import AlbumCard from "@/components/AlbumCard";
+import "..styles/Search.css";
 
 
 export default function AlbumSearchPage() {

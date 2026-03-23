@@ -1,6 +1,7 @@
 import { Album } from "@/lib/types";
 import Image from "next/image"
 import Link from "next/link";
+import "..styles/AlbumCard.css";
 
 type AlbumProps = {
     album: Album
@@ -18,7 +19,7 @@ export default function AlbumCard({ album }: AlbumProps) {
                         className="Imagen"
                     />
                 </div>
-                <div>
+                <div className="TituloCard">
                     <h1>{album.collectionName}</h1>
                 </div>
             </Link>
