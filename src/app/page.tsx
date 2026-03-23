@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import "./page.css";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <h1>Pagina Principal</h1>
 
-      <div>
+      <div className="home">
         <Link href="/favoritos"><button type="button">Pagina favoritos</button></Link>
         <Link href="/albums"><button type="button">Pagina buscar</button></Link>
       </div>

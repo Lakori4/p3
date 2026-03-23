@@ -22,7 +22,7 @@ export default function AlbumSearchPage() {
         }
         fetchAlbums();
 
-    },[search])
+    }, [search])
     return (
         <div>
             <div className="searchContainer">
@@ -40,7 +40,7 @@ export default function AlbumSearchPage() {
             <div className="resultados">
                 <section className="grid">
                     {Albums.map((album) => (
-                        <AlbumCard key={album.artistName} album={album} />
+                        <AlbumCard key={album.collectionId} album={album} />
                     ))}
                 </section>
             </div>
