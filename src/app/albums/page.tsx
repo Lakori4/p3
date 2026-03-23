@@ -22,7 +22,7 @@ export default function AlbumSearchPage() {
         }
         fetchAlbums();
 
-    })
+    },[search])
     return (
         <div>
             <div className="searchContainer">
