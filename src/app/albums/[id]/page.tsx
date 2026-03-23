@@ -1,4 +1,4 @@
-/* import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import { getAlbumById } from "@/lib/api";
 import AlbumCardDetail from "@/components/AlbumCardDetail";
 
@@ -17,4 +17,4 @@ export default async function AlbumSearchPageDetail({ params }: PageProps) {
 
     return <AlbumCardDetail album={album} />;
 
-} */
+} 
