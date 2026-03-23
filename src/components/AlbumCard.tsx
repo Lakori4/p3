@@ -1,4 +1,5 @@
 import { Album } from "@/lib/types";
+import Image from "next/image"
 import Link from "next/link";
 
 type AlbumProps = {
@@ -10,15 +11,16 @@ export default function AlbumCard({ album }: AlbumProps) {
         <div className="albumCard">
             <Link href={`/albums/${album.collectionId}`}>
                 <div className="imagenCard">
-                    <img
-                        src={album.trackViewUrl}
-                        alt={`Foto de ${album.trackName}`}
-                        className="Imagen"
 
+                    <Image
+                        src={album.artworkUrl100}
+                        alt={`Foto de ${album.collectionName}`}
+                        fill
+                        className="Imagen"
                     />
                 </div>
                 <div>
-                    <h1>{album.trackName}</h1>
+                    <h1>{album.collectionName}</h1>
                 </div>
             </Link>
         </div>

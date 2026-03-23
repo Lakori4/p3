@@ -1,8 +1,8 @@
 export type Album = {
     collectionId: string
     artistName: string;
-    trackName: string;
-    trackViewUrl: string;
+    collectionName: string;
+    artworkUrl100: string;
 }
 
 
