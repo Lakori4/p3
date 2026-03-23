@@ -15,7 +15,7 @@ const Favoritos = () => {
         <div>
             {favAlbumsList.map(a => (
                 <div>
-                    <AlbumCard album={a} />
+                    <AlbumCard key={a.collectionId} album={a} />
                     <button onClick={() => { return favAlbumsListPop(a) }}>Delete from favourites</button>
                 </div>
             ))}

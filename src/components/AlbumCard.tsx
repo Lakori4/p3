@@ -10,7 +10,7 @@ type AlbumProps = {
 
 export default function AlbumCard({ album }: AlbumProps) {
 
-    const { favAlbumsListPush } = useMusic();
+    const { favAlbumsList, favAlbumsListPush } = useMusic();
 
 
     return (
@@ -27,7 +27,7 @@ export default function AlbumCard({ album }: AlbumProps) {
             </Link>
             <div className="TituloCard">
                 <h1>{album.collectionName}</h1>
-                <button onClick={() => favAlbumsListPush(album)}>Añadir a Favs</button>
+                <button onClick={() => { favAlbumsListPush(album); }}>Añadir a Favs</button>
             </div>
 
         </div>
