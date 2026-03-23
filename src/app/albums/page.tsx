@@ -17,8 +17,8 @@ export default function AlbumSearchPage() {
 
         async function fetchAlbums() {
             const query = busqueda.trim();
-            const data = searchAlbum(query)
-            setAlbums(await data)
+            const data = await searchAlbum(query)
+            setAlbums(data)
         }
         fetchAlbums();
 
