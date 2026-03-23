@@ -1,13 +1,10 @@
 "use client"
-import Link from "next/link";
-import Image from "next/image";
-import { notFound } from "next/navigation";
+
 import { searchAlbum } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Album } from "@/lib/types";
 import AlbumCard from "@/components/AlbumCard";
 import "@/styles/Search.css";
-import { useMusic } from "@/context/MusicContext";
 
 
 export default function AlbumSearchPage() {
@@ -24,7 +21,7 @@ export default function AlbumSearchPage() {
         }
         fetchAlbums();
 
-    }, [search, busqueda])
+    }, [search])
     return (
         <div>
             <div className="searchContainer">
