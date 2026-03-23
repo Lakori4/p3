@@ -1,11 +1,11 @@
 export type Album = {
     collectionId: string
     artistName: string;
-    trackName: string;
-    trackViewUrl: string;
+    collectionName: string;
+    artworkUrl100: string;
 }
 
 
 export type AlbumResponse = {
-    albums: Album[];
+    results: Album[];
 }

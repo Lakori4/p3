@@ -12,15 +12,15 @@ export default function AlbumCard ( {album}: AlbumProps){
             <Link href={`/albums/${album.collectionId}`}>
                 <div className="imagenCard">
                     <Image
-                        src={album.trackViewUrl}
-                        alt={`Foto de ${album.trackName}`}
+                        src={album.artworkUrl100}
+                        alt={`Foto de ${album.collectionName}`}
                         fill
                         className="Imagen"
 
                     />
                 </div>
                 <div>
-                    <h1>{album.trackName}</h1>
+                    <h1>{album.collectionName}</h1>
                 </div>
             </Link>
         </div>

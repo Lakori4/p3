@@ -11,7 +11,7 @@ const api = axios.create({
 async function search(endpoint: string):Promise<Album[]> {
     try {
         const response = await api.get<AlbumResponse>(endpoint)
-        return response.data.albums ??[]
+        return response.data.results ?? []
     }catch (error){
             console.error("Error fetching data:", error);
             throw error;
