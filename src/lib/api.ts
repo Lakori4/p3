@@ -1,5 +1,4 @@
 import axios from "axios";
-import { time } from "console";
 import { AlbumResponse, Album } from "../lib/types"
 
 
@@ -20,10 +19,8 @@ async function search(endpoint: string): Promise<Album[]> {
 
 export async function searchAlbum(name: string): Promise<Album[]> {
     try {
-        console.log(search(`search?term=${name.trim()}&entity=album&limit=20`))
         return search(`/search?term=${name.trim()}&entity=album&limit=20`)
     } catch (error) {
-        console.error("Error fetching data:", error);
         throw error;
     }
 }

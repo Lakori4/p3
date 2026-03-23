@@ -6,6 +6,7 @@ import { searchAlbum } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Album } from "@/lib/types";
 import AlbumCard from "@/components/AlbumCard";
+import { useMusic } from "@/context/MusicContext";
 
 
 export default function AlbumSearchPage() {
@@ -17,9 +18,7 @@ export default function AlbumSearchPage() {
 
         async function fetchAlbums() {
             const query = busqueda.trim();
-            console.log(query)
             const data = await searchAlbum(query)
-            console.log(data)
             setAlbums(data)
         }
         fetchAlbums();

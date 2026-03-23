@@ -1,3 +1,4 @@
+import { useMusic } from "@/context/MusicContext";
 import { Album } from "@/lib/types";
 import Image from "next/image"
 import Link from "next/link";
@@ -7,6 +8,10 @@ type AlbumProps = {
 }
 
 export default function AlbumCard({ album }: AlbumProps) {
+
+    const { favAlbumsListPush } = useMusic();
+
+
     return (
         <div className="albumCard">
             <Link href={`/albums/${album.collectionId}`}>
@@ -20,6 +25,7 @@ export default function AlbumCard({ album }: AlbumProps) {
                 </div>
                 <div>
                     <h1>{album.collectionName}</h1>
+                    <button onClick={() => favAlbumsListPush(album)}>Añadir a Favs</button>
                 </div>
             </Link>
         </div>
