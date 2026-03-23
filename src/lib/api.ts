@@ -27,3 +27,11 @@ export async function searchAlbum(name: string): Promise<Album[]> {
         throw error;
     }
 }
+export async function getAlbumbyId(id: string): Promise<Album[]> {
+    try {
+        return search(`/lookup?id=${id.trim()}`)
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
