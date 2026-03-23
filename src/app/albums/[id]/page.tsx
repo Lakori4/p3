@@ -5,14 +5,14 @@ import { searchAlbum } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Album } from "@/lib/types";
 
-type PageProps={
-    params: Promise <{name:string}>;
+type PageProps = {
+    params: Promise<{ name: string }>;
 }
 
-export default async function AlbumSearchPageDetail({params}:PageProps) {
-    const {name}=await params;
+export default async function AlbumSearchPageDetail({ params }: PageProps) {
+    const { name } = await params;
     const album = searchAlbum(name);
 
-    
-    
+
+
 }

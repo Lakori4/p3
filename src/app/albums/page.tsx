@@ -28,7 +28,7 @@ export default function AlbumSearchPage() {
             <div className="searchContainer">
                 <input
                     type="text"
-                    placeholder="Buscar un cocktail..."
+                    placeholder="Buscar un album..."
                     value={busqueda}
                     onChange={(e) => setbusqueda(e.target.value)}
                     className="searchInput"
