@@ -9,7 +9,7 @@ type AlbumProps = {
 export default function AlbumCard ( {album}: AlbumProps){
     return (
         <div className="albumCard">
-            <Link href={`/album/${album.trackName}`}>
+            <Link href={`/albums/${album.collectionId}`}>
                 <div className="imagenCard">
                     <Image
                         src={album.trackViewUrl}

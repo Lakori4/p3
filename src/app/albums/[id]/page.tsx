@@ -1,15 +1,20 @@
-
-import { searchAlbum } from "@/lib/api";
+import { notFound } from "next/navigation";
+import { getAlbumById } from "@/lib/api";
+import AlbumCardDetail from "@/components/AlbumCardDetail";
 
 
 type PageProps = {
-    params: Promise<{ name: string }>;
+    params: Promise<{ id: string }>;
 }
 
 export default async function AlbumSearchPageDetail({ params }: PageProps) {
-    const { name } = await params;
-    const album = searchAlbum(name);
+    const { id } = await params;
+    const album = await getAlbumById(id);
 
+    if (!album) {
+        notFound();
+    }
 
+    return <AlbumCardDetail album={album} />;
 
 }
