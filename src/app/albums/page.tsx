@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { searchAlbum } from "@/lib/api";
 import { useEffect, useState } from "react";
 import { Album } from "@/lib/types";
+import AlbumCard from "@/components/AlbumCard";
 
 
 export default async function AlbumSearchPage() {
@@ -33,6 +34,14 @@ export default async function AlbumSearchPage() {
                 />
 
                 <button className="searchButton" onClick={() => setSearch(!search)}>Buscar</button>
+            </div>
+
+            <div className="resultados">
+                <section className="grid">
+                    {Albums.map ((album)=>(
+                        <AlbumCard key={album.artistName} album={album}/>
+                    ))}
+                </section>
             </div>
 
         </div>
