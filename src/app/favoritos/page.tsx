@@ -9,6 +9,8 @@ const Favoritos = () => {
 
     const { favAlbumsList, favAlbumsListPop } = useMusic();
 
+    console.log(favAlbumsList)
+
     return (
         <div>
             {favAlbumsList.map(a => (

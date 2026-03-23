@@ -10,7 +10,7 @@ type PageProps = {
 export default async function AlbumSearchPageDetail({ params }: PageProps) {
     const { id } = await params;
     const album = await getAlbumbyId(id);
-    console.log(album[0])
+    //console.log(album[0])
 
     if (!album) {
         notFound();
