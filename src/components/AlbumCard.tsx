@@ -1,6 +1,5 @@
 import { useMusic } from "@/context/MusicContext";
 import { Album } from "@/lib/types";
-import Image from "next/image"
 import Link from "next/link";
 import "@/styles/AlbumCard.css";
 
@@ -25,9 +24,11 @@ export default function AlbumCard({ album }: AlbumProps) {
                     />
                 </div>
             </Link>
+            <button onClick={() => { favAlbumsListPush(album); console.log(favAlbumsList); }}>Añadir a Favs</button>
+
             <div className="TituloCard">
                 <h1>{album.collectionName}</h1>
-                <button onClick={() => { favAlbumsListPush(album); }}>Añadir a Favs</button>
+                <button onClick={() => { favAlbumsListPush(album); console.log(favAlbumsList); }}>Añadir a Favs</button>
             </div>
 
         </div>
