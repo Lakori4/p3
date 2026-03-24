@@ -1,7 +1,7 @@
 "use client"
 import AlbumCard from "@/components/AlbumCardDetail";
 import { useMusic } from "@/context/MusicContext"
-import "@/app/styles.css"
+import "@/styles/Search.css"
 
 
 const Favoritos = () => {
