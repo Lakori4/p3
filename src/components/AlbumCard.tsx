@@ -9,7 +9,7 @@ type AlbumProps = {
 
 export default function AlbumCard({ album }: AlbumProps) {
 
-    const { favAlbumsList, favAlbumsListPush } = useMusic();
+    const { favAlbumsList, favAlbumsListPush, favAlbumsListPop } = useMusic();
 
 
     return (
@@ -22,13 +22,19 @@ export default function AlbumCard({ album }: AlbumProps) {
                         alt={`Foto de ${album.collectionName}`}
                         className="Imagen"
                     />
+                    { !favAlbumsList.includes(album) ? 
+                        <button onClick={(e) => { 
+                            e.preventDefault(); 
+                            e.stopPropagation(); 
+                            favAlbumsListPush(album); 
+                            console.log("pushed", album, favAlbumsList); }}> Añadir a Favs</button> : 
+                            <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); favAlbumsListPop(album); console.log("popped", album, favAlbumsList); }}>Quitar de Favs</button>}
                 </div>
             </Link>
-            <button onClick={() => { favAlbumsListPush(album); console.log(favAlbumsList); }}>Añadir a Favs</button>
+            
 
             <div className="TituloCard">
                 <h1>{album.collectionName}</h1>
-                <button onClick={() => { favAlbumsListPush(album); console.log(favAlbumsList); }}>Añadir a Favs</button>
             </div>
 
         </div>
