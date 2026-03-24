@@ -1,6 +1,6 @@
 "use client"
 import { useMusic } from "@/context/MusicContext";
-import "./page.css";
+import "./styles.css";
 import Link from "next/link";
 
 export default function Home() {

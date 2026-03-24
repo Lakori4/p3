@@ -1,7 +1,7 @@
 "use client"
 import AlbumCard from "@/components/AlbumCardDetail";
 import { useMusic } from "@/context/MusicContext"
-
+import "@/app/styles.css"
 
 
 const Favoritos = () => {
@@ -9,15 +9,15 @@ const Favoritos = () => {
 
     const { favAlbumsList, favAlbumsListPop } = useMusic();
 
-    console.log(favAlbumsList)
+    console.log("albums", favAlbumsList)
 
     return (
 
-        <div>
+        <div className="grid">
             {favAlbumsList.length ? favAlbumsList.map(a => (
                 <div key={a.collectionId}>
                     <AlbumCard album={a} />
-                    <button onClick={() => { return favAlbumsListPop(a) }}>Delete from favourites</button>
+                    <button onClick={() => favAlbumsListPop(a)}>Delete from favourites</button>
                 </div>
             )) : <h1>No hay favs</h1>}
         </div>

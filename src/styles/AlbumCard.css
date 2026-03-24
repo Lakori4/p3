@@ -1,18 +1,27 @@
 .albumCard {
     display: flex;
-    padding: auto;
-    justify-content: center;
-    align-items: baseline;
+    flex-direction: row;
+    width: 20%; 
+    height: auto;
+    padding: 1%;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: antiquewhite;
 }
+
 .imagenCard{
     max-width: 100em;
     max-height: 100em;
 }
-.TituloCard{
-    font: Arial;
 
+.TituloCard{
+    h1 {
+        margin-top: 0;
+    };
+    font: Arial;
+    font-size: small;
 }
+
 .TituloCard :hover{
     background-color: rgb(240, 225, 206);
 }
