@@ -31,6 +31,7 @@ export default function AlbumSearchPage() {
                     value={busqueda}
                     onChange={(e) => setbusqueda(e.target.value)}
                     className="searchInput"
+                    onKeyDown={e => { if (e.key === "Enter") { setSearch(!search) } }}
                 />
 
                 <button className="searchButton" onClick={() => setSearch(!search)}>Buscar</button>
