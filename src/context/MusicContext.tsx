@@ -16,7 +16,7 @@ export const MusicProvider = ({ children }: { children: ReactNode }) => {
     const [favAlbumsList, setFavAlbumList] = useState<Album[]>([])
 
     const favAlbumsListPush = (item: Album) => {
-        if (!favAlbumsList.includes(item)) {
+        if (!favAlbumsList.some(i => i.collectionId === item.collectionId)) {
             setFavAlbumList([...favAlbumsList, item])
         } else {
             console.log("ya está el album")
