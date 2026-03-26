@@ -1,7 +1,7 @@
 import { useMusic } from "@/context/MusicContext";
 import { Album } from "@/lib/types";
 import Link from "next/link";
-import "@/styles/AlbumCard.css";
+import "./AlbumCard.css";
 
 type AlbumProps = {
     album: Album

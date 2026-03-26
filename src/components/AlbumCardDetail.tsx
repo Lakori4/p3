@@ -4,7 +4,7 @@ type AlbumProps = {
     album: Album
 }
 
-export default function AlbumCardDetail({ album }: AlbumProps) {
+const AlbumCardDetail = ({ album }: AlbumProps) => {
     return (
         <div className="albumCard">
 
@@ -22,3 +22,4 @@ export default function AlbumCardDetail({ album }: AlbumProps) {
         </div>
     )
 }
+export default AlbumCardDetail

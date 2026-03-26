@@ -5,6 +5,7 @@ import AlbumCardDetail from "@/components/AlbumCardDetail";
 import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
 import { Album } from "@/lib/types";
+import "@/app/styles.css"
 
 export default function AlbumSearchPageDetail() {
     const { id } = useParams();
