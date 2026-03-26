@@ -6,11 +6,6 @@ import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
 import { Album } from "@/lib/types";
 
-
-type PageProps = {
-    params: Promise<{ id: string }>;
-}
-
 export default function AlbumSearchPageDetail() {
     const { id } = useParams();
 
@@ -36,11 +31,17 @@ export default function AlbumSearchPageDetail() {
         })
     }, [id]);
 
-    if (!album) {
-        return <h1>kjadf</h1>
-    }
 
+    return (
 
-    return <AlbumCardDetail album={album} />;
+        <div>
+            {!album && loading && <h1>Loading...</h1>}
+            {album ?
+            (<>
+                <AlbumCardDetail album={album} />
+            </>): <></>}
+            {error && <h2>{error}</h2>}
+        </div>
+    );
 
 } 
