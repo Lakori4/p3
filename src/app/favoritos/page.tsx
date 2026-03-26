@@ -1,5 +1,5 @@
 "use client"
-import AlbumCard from "@/components/AlbumCardDetail";
+import AlbumCard from "@/components/AlbumCard";
 import { useMusic } from "@/context/MusicContext"
 import "@/styles/Search.css"
 
