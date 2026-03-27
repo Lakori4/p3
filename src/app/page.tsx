@@ -7,8 +7,6 @@ export default function Home() {
 
   const { favAlbumsList } = useMusic();
 
-  console.log("home", favAlbumsList)
-
   return (
     <div className="home">
       <h1>Página Principal</h1>
