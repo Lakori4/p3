@@ -22,20 +22,21 @@ export default function AlbumCard({ album }: AlbumProps) {
                         alt={`Foto de ${album.collectionName}`}
                         className="Imagen"
                     />
-                    { !favAlbumsList.some(i => i.collectionId === album.collectionId) ? 
-                        <button onClick={(e) => { 
-                            e.preventDefault(); 
-                            e.stopPropagation(); 
-                            favAlbumsListPush(album); }}> Añadir a Favs</button> : 
-                            <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); favAlbumsListPop(album); }}>Quitar de Favs</button>}
+                    {!favAlbumsList.some(i => i.collectionId === album.collectionId) ?
+                        <button onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            favAlbumsListPush(album);
+                        }}> Añadir a Favs</button> :
+                        <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); favAlbumsListPop(album); }}>Quitar de Favs</button>}
                 </div>
             </Link>
-            
 
-            <div className="TituloCard">
-                <h1>{album.collectionName}</h1>
-            </div>
-
+            <Link href={`/albums/${album.collectionId}`}>
+                <div className="TituloCard">
+                    <h1>{album.collectionName}</h1>
+                </div>
+            </Link>
         </div>
     )
 }
