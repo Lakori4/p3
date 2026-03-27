@@ -1,4 +1,5 @@
 import { Album } from "@/lib/types";
+import "./AlbumDetail.css"
 
 type AlbumProps = {
     album: Album
