@@ -13,6 +13,9 @@
         text-decoration: none;
     };
 }
+.albumCard:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 .imagenCard{
     display: flex;
@@ -27,10 +30,7 @@
     h1 {
         margin-top: 0;
     };
-    font: Arial;
+    font-family: Arial;
     font-size: small;
 }
 
-.TituloCard :hover{
-    background-color: rgb(240, 225, 206);
-}
