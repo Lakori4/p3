@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  div {
+    a {
+      padding: 2px;
+    }
+  }
 }
 
 .grid {

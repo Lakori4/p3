@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1>Pagina Principal</h1>
+      <h1>Página Principal</h1>
       <div>
         <Link href="/albums"><button type="button">Pagina buscar</button></Link>
         <Link href="/favoritos"><button type="button">Pagina favoritos</button></Link>
