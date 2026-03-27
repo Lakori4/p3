@@ -18,13 +18,12 @@ const AlbumCardDetail = ({ album }: AlbumProps) => {
     }
 
     return (
-        <div className="albumCard">
+        <div className="albumDetail">
 
-            <div className="imagenCard">
+            <div className="imagenDetail">
                 <img
                     src={album.artworkUrl100}
                     alt={`Foto de ${album.collectionName}`}
-                    className="Imagen"
                 />
             </div>
             <div>

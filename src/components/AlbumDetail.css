@@ -1,56 +1,13 @@
-.albumCard {
+.albumDetail {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
-  background: #fffaf2;
-  border: 1px solid #e9d5c6;
+  background: #faebd7;
+  border: 2px #696969;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   max-width: 880px;
+  min-width: 50%;
   margin: 1rem auto;
-}
-
-.imagenCard {
-  flex: 0 0 140px;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #e1c8b1;
-  background: #faf2ea;
-}
-
-.imagenCard .Imagen {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.albumCard > div + div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.albumCard h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  color: #3f2a1c;
-}
-
-@media (max-width: 680px) {
-  .albumCard {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imagenCard {
-    width: 85%;
-    max-width: 260px;
-  }
-
-  .albumCard > div + div {
-    width: 90%;
-    text-align: center;
-  }
 }
