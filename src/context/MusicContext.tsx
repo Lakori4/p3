@@ -18,8 +18,6 @@ export const MusicProvider = ({ children }: { children: ReactNode }) => {
     const favAlbumsListPush = (item: Album) => {
         if (!favAlbumsList.some(i => i.collectionId === item.collectionId)) {
             setFavAlbumList([...favAlbumsList, item])
-        } else {
-            console.log("ya está el album")
         }
     }
     const favAlbumsListPop = (item: Album) => { setFavAlbumList(favAlbumsList.filter(e => e.collectionId !== item.collectionId)) }
