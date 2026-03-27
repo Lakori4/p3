@@ -38,9 +38,9 @@ export default function AlbumSearchPageDetail() {
         <div>
             {!album && loading && <h1>Loading...</h1>}
             {album ?
-            (<>
-                <AlbumCardDetail album={album} />
-            </>): <></>}
+                (<>
+                    <AlbumCardDetail album={album} />
+                </>) : <></>}
             {error && <h2>{error}</h2>}
         </div>
     );

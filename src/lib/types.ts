@@ -3,6 +3,11 @@ export type Album = {
     artistName: string;
     collectionName: string;
     artworkUrl100: string;
+    country: string;
+    trackCount: number;
+    collectionExplicitness: string;
+    primaryGenreName: string;
+    releaseDate: string,
 }
 
 
