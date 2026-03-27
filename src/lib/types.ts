@@ -7,7 +7,9 @@ export type Album = {
     trackCount: number;
     collectionExplicitness: string;
     primaryGenreName: string;
-    releaseDate: string,
+    releaseDate: string;
+    artistViewUrl: string;
+    collectionViewUrl: string,
 }
 
 

@@ -1,5 +1,6 @@
 import { Album } from "@/lib/types";
 import "./AlbumDetail.css"
+import Link from "next/link";
 
 type AlbumProps = {
     album: Album
@@ -25,6 +26,8 @@ const AlbumCardDetail = ({ album }: AlbumProps) => {
                     src={album.artworkUrl100}
                     alt={`Foto de ${album.collectionName}`}
                 />
+                <button><Link href={album.collectionViewUrl} target="_blank">Ver album en Apple Music</Link></button>
+                <button><Link href={album.artistViewUrl} target="_blank">Ver artista en Apple Music</Link></button>
             </div>
             <div>
                 <h1>{album.collectionName} - {album.artistName}</h1>
